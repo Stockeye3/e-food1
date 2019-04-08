@@ -9,7 +9,7 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav animate side-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home
+            <a class="nav-link" href="/public/login">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -41,20 +41,22 @@
           </li>
           </ul>
 @endif
+
  
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                     @else
-                        <a href="{{ route('login') }}"> Admin Login </a>
+                        <a href="{{ route('login') }}">| Admin Login |</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}"> Admin Register </a>
+                            <a href="{{ route('register') }}">| Admin Register |</a>
                         @endif
                     @endauth
                 </div>
             @endif
-
+     <a href="/customer/register">| Customer Register |</a>
+     <a href="/customer/login">| Customer Login |</a>
       </div>
     </nav>
   </div>

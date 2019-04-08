@@ -16,7 +16,7 @@ class CustomersController extends Controller
     }
 
     public function create() {
-        return view('auth.customer_register');
+        return view('customer.register');
     }
 
     public function store(Request $request) {
